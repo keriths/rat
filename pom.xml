@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.fs</groupId>
+    <artifactId>rat-parent</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>rat-core</module>
+        <module>rat-spring</module>
+        <module>rat-war</module>
+        <module>rat-demo</module>
+    </modules>
+    <properties>
+        <mvn.host>mvn.leya.com</mvn.host>
+    </properties>
+
+    <distributionManagement>
+        <repository>
+            <id>Releases</id>
+            <name>Nexus Releases Repository</name>
+            <url>http://${mvn.host}/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>Snapshots</id>
+            <name>Nexus Snapshots Repository</name>
+            <url>http://${mvn.host}/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+</project>
